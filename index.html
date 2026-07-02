@@ -47,7 +47,14 @@
     <!-- pl3xmap -->
     <link rel="stylesheet" href="styles.css" type="text/css"/>
     <script src="pl3xmap.js"></script>
-    <base href="/dynmap.dedina/">
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        if (window.config) {
+          window.config.api = "/dynmap.dedina/api/";
+          window.config.tiles = "/dynmap.dedina/tiles/";
+        }
+      });
+    </script>
   </head>
   <body>
     <div id="map" class="map"></div>
