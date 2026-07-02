@@ -48,12 +48,10 @@
     <link rel="stylesheet" href="styles.css" type="text/css"/>
     <script src="pl3xmap.js"></script>
     <script>
-      window.addEventListener('DOMContentLoaded', () => {
-        if (window.config) {
-          window.config.api = "/dynmap.dedina/api/";
-          window.config.tiles = "/dynmap.dedina/tiles/";
-        }
-      });
+      window.config = {
+        api: "/web/api/",
+        tiles: "/web/tiles/"
+      };
     </script>
   </head>
   <body>
